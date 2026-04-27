@@ -10,3 +10,47 @@ body{
 hr{
     border: 3px solid #005F5F;
 }
+nav{
+    padding: 10px;
+}
+
+nav a{
+    display: inline-block;
+    text-decoration: none;
+}
+.btn {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-border-reveal {
+    background-color: transparent;
+    color: #005F5F;
+    border: 2px solid #005F5F;
+    position: relative;
+  }
+  
+  .btn-border-reveal::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #005F5F;
+    transition: width 0.3s ease;
+    z-index: -1;
+  }
+  
+  .btn-border-reveal:hover::after {
+    width: 100%;
+  }
+  
+  .btn-border-reveal:hover {
+    color: white;
+  }
+  

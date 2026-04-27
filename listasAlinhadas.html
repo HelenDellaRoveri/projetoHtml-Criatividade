@@ -1,11 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Listas Alinhadas</title>
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #E0FFFF;
+            color: #005F5F;
+            margin-left: 20px;
+            padding: 0;
+        }
+
+        span{
+            font-weight: bold;
+            font-size: 16px;
+            text-decoration:underline;
+        }
+    </style>
 </head>
+
 <body>
+    <a href="./index.html"><img src="./back.png" alt="voltar" width="30" height="30"></a>
+
     <h1>Projeto Vendas</h1>
     <ul class="tree">
         <li>
@@ -31,23 +51,23 @@
         </li>
         <li>
             <span wm-folder>frontend</span>
-                <ul>
-                    <li>
-                        <span wm-folder>public</span>
-                        <ul>
-                            <li>app.css</li>
-                            <li>app.js</li>
-                            <li>index.html</li>
-                        </ul>
-                    </li>
-                </ul>
+            <ul>
+                <li>
+                    <span wm-folder>public</span>
+                    <ul>
+                        <li>app.css</li>
+                        <li>app.js</li>
+                        <li>index.html</li>
+                    </ul>
+                </li>
+            </ul>
         </li>
     </ul>
 
     <link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
     <script>
-        document.querySelectorAll('[wm-folder]').forEach(folder =>{
-            folder.onclick = function(e){ // <--- adicionei a funcionalidade que a função ira funcionar pelo click
+        document.querySelectorAll('[wm-folder]').forEach(folder => {
+            folder.onclick = function (e) { // <--- adicionei a funcionalidade que a função ira funcionar pelo click
                 const ul = folder.nextElementSibling
                 const d = ul.style.display
                 ul.style.display = d === 'none' ? 'block' : 'none';
@@ -55,4 +75,5 @@
         })
     </script>
 </body>
+
 </html>
